@@ -1,0 +1,6 @@
+model,error_type,count
+dummy_most_frequent,false_positive,6140
+linear_svm,false_negative,47
+linear_svm,false_positive,60
+logreg,false_negative,82
+logreg,false_positive,87

@@ -1,0 +1,41 @@
+{
+  "rows_before_merge_dedup": 95369,
+  "rows_after_conflict_filter_before_dedup": 95369,
+  "rows_after_dedup": 94961,
+  "duplicates_removed": 408,
+  "conflicting_hashes_removed": 0,
+  "class_counts": {
+    "0": 40933,
+    "1": 54028
+  },
+  "dataset_counts": {
+    "kaggle_large": 82077,
+    "cross_model_phishing": 9986,
+    "four_class_human_llm": 2898
+  },
+  "origin_counts": {
+    "human_or_legacy": 82077,
+    "llm": 6984,
+    "human": 5900
+  },
+  "generator_counts": {
+    "not_applicable": 82077,
+    "human": 5900,
+    "unknown_llm": 1998,
+    "gpt-4.1": 1665,
+    "deepseek3.2": 1665,
+    "llama-3.3-70b": 1656
+  },
+  "source_inputs": [
+    {
+      "dataset": "uploaded_small",
+      "rows": 12884,
+      "path": "H:\\assignment\\data\\processed\\uploaded_unified_dedup.csv"
+    },
+    {
+      "dataset": "kaggle_large",
+      "rows": 82485,
+      "path": "H:\\assignment\\data\\raw\\kaggle_large\\phishing_email.csv"
+    }
+  ]
+}

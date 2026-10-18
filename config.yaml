@@ -1,0 +1,49 @@
+project:
+  name: Robust Detection of AI-Generated Phishing Emails under Cross-Generator Distribution Shift
+  intended_windows_root: 'D:\Ai projects'
+  seed: 42
+
+data:
+  large_dataset_slug: naserabdullahalam/phishing-email-dataset
+  use_large_dataset: true
+  large_raw_dir: data/raw/kaggle_large
+  small_dataset: data/processed/uploaded_unified_dedup.csv
+  master_dataset: data/processed/master_dataset.csv
+
+training:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+  max_tfidf_features: 80000
+  ngram_range: [1, 2]
+  min_df: 2
+  sublinear_tf: true
+  class_weight: balanced
+  transformer_model: distilbert-base-uncased
+
+experiments:
+  baseline_models:
+    - dummy_most_frequent
+    - logistic_regression
+    - linear_svm
+  cross_generator_models:
+    - logistic_regression
+    - linear_svm
+  held_out_generators:
+    - gpt-4.1
+    - deepseek3.2
+    - llama-3.3-70b
+
+research:
+  implemented_question: >
+    How well do text-based phishing-email detectors trained on a large heterogeneous
+    corpus generalize to phishing produced by an unseen LLM generator?
+  primary_target: phishing_label
+  supported:
+    - phishing-vs-legitimate classification
+    - large-corpus baseline training
+    - cross-generator robustness
+    - subgroup and error analysis
+  not_supported_by_current_data:
+    - adversarial register shift
+    - combined generator-plus-register shift

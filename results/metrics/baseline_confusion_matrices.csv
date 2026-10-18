@@ -1,0 +1,7 @@
+model,split,tn,fp,fn,tp
+dummy_most_frequent,validation,0,6140,0,8104
+dummy_most_frequent,test,0,6140,0,8105
+logreg,validation,6039,101,71,8033
+logreg,test,6053,87,82,8023
+linear_svm,validation,6078,62,46,8058
+linear_svm,test,6080,60,47,8058
